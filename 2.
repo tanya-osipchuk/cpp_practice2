@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+    int words = 0;
+    cout << "Enter the word you are loooking for: \n";
+    string sough_for_word;
+    cin >> sough_for_word;
+    string sentence;
+    cout << "Enter the sentence in which you want to find this word: \n";
+    while (cin >> sentence) {
+        ++words;
+        if (sough_for_word == sentence)
+            cout << "Word " << sough_for_word << " is repeating on position " << words << '\n';
+    }
+    return 0;
+}
