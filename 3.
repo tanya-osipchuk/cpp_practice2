@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    system("chcp 65001");
+    cout<<"Введите двоичное число: \n";
+    int digit;
+    cin >> digit;
+    int i = 0;
+    int number = digit;
+    int rest = 1;
+    
+    while (number >= 1 && rest <= 1)
+    {
+        rest = number % 10;
+        number /= 10;
+        i += 1;
+    }
+    
+    int two = 1;
+    int sum = 0;
+    number = digit;
+
+    while (i > 0)
+    {
+        rest = number % 10;
+        number /= 10;
+        sum = sum + rest * two;
+        two *= 2;
+        i -= 1;
+    }
+    
+    cout << "Введенное число в десятичной форме: \n" << sum << endl;
+    system ("pause");
+}
